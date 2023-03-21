@@ -21,8 +21,8 @@ class TaskingBuddy(tk.Tk):
         self.gif = tk.PhotoImage(file = self.full_path)
 
         self.curr_gif = self.gif
-        self.work_time = 1 * 10
-        self.break_time = 1 * 5
+        self.work_time = 25 * 60
+        self.break_time = 5 * 60
         self.remaining_time = self.work_time
         self.running = False
         self.timer_mode = "Work"
@@ -37,7 +37,6 @@ class TaskingBuddy(tk.Tk):
 
         self.gif = tk.Label(self, image=self.curr_gif)
         self.gif.pack(pady=20)
-        #self.animate_gif(0)
 
         self.start_button = tk.Button(self, text = 'Start', font=(self.font, 12), command = self.beginTimer)
         self.start_button.pack(side = "left", padx=40)
